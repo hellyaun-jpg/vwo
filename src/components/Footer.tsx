@@ -34,9 +34,7 @@ export default function Footer() {
             <div key={group} className="footer__col">
               <h4 className="footer__col-title">{group}</h4>
               <ul className="footer__col-links">
-                {items.map(item => (
-                  <li key={item}><button className="footer__link">{item}</button></li>
-                ))}
+                {items.map(item => <li key={item}><button className="footer__link">{item}</button></li>)}
               </ul>
             </div>
           ))}
@@ -52,10 +50,10 @@ export default function Footer() {
             <span>&copy; {new Date().getFullYear()} VWO Viking Warrior Owl. All rights reserved.</span>
             <div className="footer__legal-links">
               <button className="footer__legal-link">Privacy</button>
-              <span className="footer__legal-sep">|</span>
+              <span>|</span>
               <button className="footer__legal-link">Terms</button>
-              <span className="footer__legal-sep">|</span>
-              <button className="footer__legal-link">Cookie Policy</button>
+              <span>|</span>
+              <button className="footer__legal-link">Cookies</button>
             </div>
           </div>
         </div>

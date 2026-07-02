@@ -2,34 +2,10 @@ import { useState } from 'react'
 import './WarriorsSection.css'
 
 const warriors = [
-  {
-    name: 'Berserker', role: 'Frontline Warrior',
-    image: 'https://images.pexels.com/photos/8733673/pexels-photo-8733673.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: "Wielders of uncontrollable fury. Berserkers channel Odin's rage to become unstoppable forces on the battlefield.",
-    stats: { strength: 95, defense: 60, speed: 70, wisdom: 40 },
-    rune: 'Isa', abilities: ['Rage Storm', 'Bear Form', 'Blood Frenzy'],
-  },
-  {
-    name: 'Skald', role: 'Battle Poet',
-    image: 'https://images.pexels.com/photos/8733678/pexels-photo-8733678.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Masters of runic magic and ancient song. Skalds inspire allies and weaken enemies with words of power older than time.',
-    stats: { strength: 55, defense: 65, speed: 75, wisdom: 95 },
-    rune: 'Ansuz', abilities: ['Battle Hymn', 'Rune Ward', 'Seidr Weave'],
-  },
-  {
-    name: 'Valkyrie', role: 'Death Chooser',
-    image: 'https://images.pexels.com/photos/8733677/pexels-photo-8733677.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Chosen servants of Odin who decide the fate of warriors. Valkyries move between realms with supernatural grace and precision.',
-    stats: { strength: 80, defense: 75, speed: 90, wisdom: 70 },
-    rune: 'Tiwaz', abilities: ['Soul Harvest', 'Bifrost Step', 'Shield Maiden'],
-  },
-  {
-    name: 'Jarl', role: 'Chieftain',
-    image: 'https://images.pexels.com/photos/8733679/pexels-photo-8733679.jpeg?auto=compress&cs=tinysrgb&w=600',
-    description: 'Born leaders who command armies with iron will. Jarls excel in strategy and rally their clan to victory through superior tactics.',
-    stats: { strength: 70, defense: 85, speed: 65, wisdom: 85 },
-    rune: 'Othala', abilities: ['War Banner', 'Shield Wall', 'Command'],
-  },
+  { name: 'Berserker', role: 'Frontline Warrior', image: 'https://images.pexels.com/photos/8733673/pexels-photo-8733673.jpeg?auto=compress&cs=tinysrgb&w=600', description: "Wielders of uncontrollable fury. Berserkers channel Odin's rage to become unstoppable forces on the battlefield.", stats: { strength: 95, defense: 60, speed: 70, wisdom: 40 }, rune: 'Isa', abilities: ['Rage Storm', 'Bear Form', 'Blood Frenzy'] },
+  { name: 'Skald', role: 'Battle Poet', image: 'https://images.pexels.com/photos/8733678/pexels-photo-8733678.jpeg?auto=compress&cs=tinysrgb&w=600', description: 'Masters of runic magic and ancient song. Skalds inspire allies and weaken enemies with words of power older than time.', stats: { strength: 55, defense: 65, speed: 75, wisdom: 95 }, rune: 'Ansuz', abilities: ['Battle Hymn', 'Rune Ward', 'Seidr Weave'] },
+  { name: 'Valkyrie', role: 'Death Chooser', image: 'https://images.pexels.com/photos/8733677/pexels-photo-8733677.jpeg?auto=compress&cs=tinysrgb&w=600', description: 'Chosen servants of Odin who decide the fate of warriors. Valkyries move between realms with supernatural grace and precision.', stats: { strength: 80, defense: 75, speed: 90, wisdom: 70 }, rune: 'Tiwaz', abilities: ['Soul Harvest', 'Bifrost Step', 'Shield Maiden'] },
+  { name: 'Jarl', role: 'Chieftain', image: 'https://images.pexels.com/photos/8733679/pexels-photo-8733679.jpeg?auto=compress&cs=tinysrgb&w=600', description: 'Born leaders who command armies with iron will. Jarls excel in strategy and rally their clan to victory through superior tactics.', stats: { strength: 70, defense: 85, speed: 65, wisdom: 85 }, rune: 'Othala', abilities: ['War Banner', 'Shield Wall', 'Command'] },
 ]
 
 function StatBar({ value, label }: { value: number; label: string }) {

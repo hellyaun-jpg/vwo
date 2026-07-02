@@ -21,7 +21,12 @@
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10,10,10,0.65) 0%, rgba(10,10,10,0.45) 40%, rgba(10,10,10,0.75) 80%, rgba(10,10,10,1) 100%);
+  background: linear-gradient(to bottom,
+    rgba(10,10,10,0.65) 0%,
+    rgba(10,10,10,0.45) 40%,
+    rgba(10,10,10,0.75) 80%,
+    rgba(10,10,10,1) 100%
+  );
 }
 
 .hero__content {
@@ -33,14 +38,7 @@
   padding-top: 80px;
 }
 
-.hero__badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 24px;
-}
-
+.hero__badge { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 24px; }
 .hero__badge-line { display: block; width: 48px; height: 1px; background: var(--gold); opacity: 0.6; }
 .hero__badge-text { font-size: 11px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); opacity: 0.8; }
 
@@ -74,7 +72,6 @@
   letter-spacing: 0.5em;
   margin-left: 0.5em;
   margin-top: 4px;
-  text-transform: uppercase;
 }
 
 .hero__description {
@@ -85,14 +82,7 @@
   margin: 0 auto 28px;
 }
 
-.hero__rune-divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 36px;
-}
-
+.hero__rune-divider { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 36px; }
 .hero__rune-divider span { display: block; width: 80px; height: 1px; background: linear-gradient(to right, transparent, var(--gold-dark)); }
 .hero__rune-divider span:last-child { background: linear-gradient(to left, transparent, var(--gold-dark)); }
 
@@ -107,7 +97,6 @@
   padding: 14px 36px;
   border-radius: 4px;
   transition: all 0.25s ease;
-  cursor: pointer;
 }
 
 .hero__btn--primary { background: var(--gold); color: var(--bg); }
@@ -116,7 +105,6 @@
 .hero__btn--secondary:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); transform: translateY(-2px); }
 
 .hero__stats { display: flex; align-items: center; justify-content: center; }
-
 .hero__stat { display: flex; flex-direction: column; align-items: center; padding: 0 36px; }
 .hero__stat-number { font-family: 'Cinzel', serif; font-size: 28px; font-weight: 700; color: var(--gold); line-height: 1; }
 .hero__stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 4px; }

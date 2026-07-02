@@ -2,8 +2,6 @@ import { ChevronDown } from 'lucide-react'
 import './Hero.css'
 
 export default function Hero() {
-  const scrollToArena = () => document.querySelector('#arena')?.scrollIntoView({ behavior: 'smooth' })
-
   return (
     <section className="hero" id="home">
       <div className="hero__bg" style={{ backgroundImage: `url('https://images.pexels.com/photos/5370688/pexels-photo-5370688.jpeg?auto=compress&cs=tinysrgb&w=1920')` }} />
@@ -62,7 +60,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <button className="hero__scroll-cue" onClick={scrollToArena} aria-label="Scroll down">
+      <button className="hero__scroll-cue" onClick={() => document.querySelector('#arena')?.scrollIntoView({ behavior: 'smooth' })} aria-label="Scroll down">
         <ChevronDown size={28} />
       </button>
     </section>

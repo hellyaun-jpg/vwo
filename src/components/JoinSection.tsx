@@ -23,20 +23,16 @@ export default function JoinSection() {
         <div className="join__content">
           <p className="join__eyebrow">Your Saga Awaits</p>
           <h2 className="join__title">Forge Your Legend</h2>
-          <p className="join__desc">The ravens have spoken. The Allfather calls for warriors of extraordinary courage. Will you answer? Join those already battling for eternal glory.</p>
+          <p className="join__desc">The ravens have spoken. The Allfather calls for warriors of extraordinary courage. Will you answer?</p>
 
           <div className="join__pillars">
             {[
-              { label: 'Earn Glory', sub: 'Climb the ranks and claim legendary rewards', path: 'M12 2 L15 9 L22 10 L17 15 L18 22 L12 19 L6 22 L7 15 L2 10 L9 9 Z' },
-              { label: 'Join a Clan', sub: 'Fight alongside brothers and sisters in arms', path: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75' },
-              { label: 'Gain Power', sub: 'Unlock ancient runes and legendary abilities', path: 'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z' },
+              { label: 'Earn Glory', sub: 'Climb the ranks and claim legendary rewards' },
+              { label: 'Join a Clan', sub: 'Fight alongside brothers and sisters in arms' },
+              { label: 'Gain Power', sub: 'Unlock ancient runes and legendary abilities' },
             ].map(p => (
               <div key={p.label} className="join__pillar">
-                <div className="join__pillar-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d={p.path} stroke="var(--gold)" strokeWidth="1.5" strokeLinejoin="round" fill="none" />
-                  </svg>
-                </div>
+                <div className="join__pillar-dot" />
                 <div className="join__pillar-text">
                   <strong>{p.label}</strong>
                   <span>{p.sub}</span>
@@ -54,7 +50,7 @@ export default function JoinSection() {
                 <path d="M14 24 L21 31 L34 17" stroke="var(--gold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <h3>The Gates Open, {warriorName}!</h3>
-              <p>Your warrior's oath has been received. The Arena awaits. Check your ravens (email) for next steps.</p>
+              <p>Your warrior's oath has been received. The Arena awaits — check your ravens (email) for next steps.</p>
               <button className="join__success-btn" onClick={() => { setSubmitted(false); setWarriorName(''); setEmail(''); setSelectedClass('') }}>
                 Register Another Warrior
               </button>
@@ -67,13 +63,13 @@ export default function JoinSection() {
               </div>
 
               <div className="join__field">
-                <label htmlFor="warrior-name">Warrior Name</label>
-                <input id="warrior-name" type="text" placeholder="Enter your battle name" value={warriorName} onChange={e => setWarriorName(e.target.value)} required />
+                <label htmlFor="wname">Warrior Name</label>
+                <input id="wname" type="text" placeholder="Enter your battle name" value={warriorName} onChange={e => setWarriorName(e.target.value)} required />
               </div>
 
               <div className="join__field">
-                <label htmlFor="warrior-email">Raven Address (Email)</label>
-                <input id="warrior-email" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} required />
+                <label htmlFor="wemail">Raven Address (Email)</label>
+                <input id="wemail" type="email" placeholder="your@email.com" value={email} onChange={e => setEmail(e.target.value)} required />
               </div>
 
               <div className="join__field">
@@ -90,7 +86,6 @@ export default function JoinSection() {
               <button type="submit" className="join__submit" disabled={!warriorName || !email || !selectedClass}>
                 Enter the Arena
               </button>
-
               <p className="join__disclaimer">By entering, you swear upon Mjolnir to uphold the Viking Code of Honor.</p>
             </form>
           )}

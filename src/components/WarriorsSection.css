@@ -1,10 +1,4 @@
-.warriors {
-  padding: 120px 0;
-  background: var(--bg-card);
-  border-top: 1px solid var(--bg-border);
-  border-bottom: 1px solid var(--bg-border);
-}
-
+.warriors { padding: 120px 0; background: var(--bg-card); border-top: 1px solid var(--bg-border); border-bottom: 1px solid var(--bg-border); }
 .warriors__container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .warriors__header { text-align: center; margin-bottom: 56px; }
 .warriors__eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; opacity: 0.8; }
@@ -13,17 +7,12 @@
 
 .warriors__tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 48px; }
 
-.warriors__tab {
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
-  padding: 16px 12px; border-radius: 6px; border: 1px solid var(--bg-border);
-  background: var(--bg); transition: all 0.2s; cursor: pointer;
-}
-
+.warriors__tab { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 16px 12px; border-radius: 6px; border: 1px solid var(--bg-border); background: var(--bg); transition: all 0.2s; }
 .warriors__tab:hover { border-color: rgba(201,162,39,0.3); background: var(--bg-raised); }
 .warriors__tab--active { border-color: var(--gold); background: var(--gold-dim); }
-.warriors__tab-name { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: 0.05em; }
+.warriors__tab-name { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600; color: var(--text); }
 .warriors__tab--active .warriors__tab-name { color: var(--gold); }
-.warriors__tab-role { font-size: 11px; color: var(--text-muted); letter-spacing: 0.05em; }
+.warriors__tab-role { font-size: 11px; color: var(--text-muted); }
 
 .warriors__panel { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
 
@@ -31,52 +20,27 @@
 .warriors__image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
 .warriors__image-wrap:hover .warriors__image { transform: scale(1.04); }
 .warriors__image-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, transparent 50%); }
-
 .warriors__rune-badge { position: absolute; bottom: 20px; left: 20px; display: flex; flex-direction: column; gap: 2px; }
 .warriors__rune-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); opacity: 0.7; }
 .warriors__rune-name { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; color: var(--gold); }
 
 .warriors__info { display: flex; flex-direction: column; gap: 20px; }
-
-.warriors__class-badge {
-  display: inline-block; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase;
-  color: var(--gold); border: 1px solid rgba(201,162,39,0.3); padding: 5px 14px;
-  border-radius: 3px; background: var(--gold-dim); width: fit-content;
-}
-
+.warriors__class-badge { display: inline-block; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,162,39,0.3); padding: 5px 14px; border-radius: 3px; background: var(--gold-dim); width: fit-content; }
 .warriors__name { font-family: 'Cinzel', serif; font-size: clamp(32px, 4vw, 48px); font-weight: 700; color: var(--text); line-height: 1; margin-top: -4px; }
 .warriors__description { font-size: 15px; color: var(--text-muted); line-height: 1.7; }
 .warriors__abilities-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; }
 .warriors__ability-list { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.warriors__ability {
-  font-family: 'Cinzel', serif; font-size: 12px; font-weight: 600; color: var(--gold);
-  border: 1px solid rgba(201,162,39,0.25); padding: 5px 14px; border-radius: 3px;
-  background: rgba(201,162,39,0.07); letter-spacing: 0.05em;
-}
+.warriors__ability { font-family: 'Cinzel', serif; font-size: 12px; font-weight: 600; color: var(--gold); border: 1px solid rgba(201,162,39,0.25); padding: 5px 14px; border-radius: 3px; background: rgba(201,162,39,0.07); }
 
 .warriors__stats { display: flex; flex-direction: column; gap: 12px; }
-
 .warrior__stat-header { display: flex; justify-content: space-between; margin-bottom: 6px; }
 .warrior__stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
 .warrior__stat-value { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600; color: var(--gold); }
 .warrior__stat-bar { height: 4px; background: var(--bg-border); border-radius: 2px; overflow: hidden; }
 .warrior__stat-fill { height: 100%; background: linear-gradient(90deg, var(--gold-dark), var(--gold)); border-radius: 2px; transition: width 0.5s; }
 
-.warriors__select-btn {
-  font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; letter-spacing: 0.15em;
-  text-transform: uppercase; padding: 14px 32px; background: var(--gold); color: var(--bg);
-  border-radius: 4px; width: fit-content; transition: all 0.2s; margin-top: 4px;
-}
-
+.warriors__select-btn { font-family: 'Cinzel', serif; font-size: 13px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; padding: 14px 32px; background: var(--gold); color: var(--bg); border-radius: 4px; width: fit-content; transition: all 0.2s; margin-top: 4px; }
 .warriors__select-btn:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,162,39,0.35); }
 
-@media (max-width: 880px) {
-  .warriors__panel { grid-template-columns: 1fr; }
-  .warriors__image-wrap { aspect-ratio: 16/9; max-height: 340px; }
-}
-
-@media (max-width: 600px) {
-  .warriors__tabs { grid-template-columns: repeat(2, 1fr); }
-  .warriors { padding: 80px 0; }
-}
+@media (max-width: 880px) { .warriors__panel { grid-template-columns: 1fr; } .warriors__image-wrap { aspect-ratio: 16/9; max-height: 340px; } }
+@media (max-width: 600px) { .warriors__tabs { grid-template-columns: repeat(2, 1fr); } .warriors { padding: 80px 0; } }

@@ -12,6 +12,8 @@ const leaderboard = [
 ]
 
 const rankColors: Record<number, string> = { 1: '#FFD700', 2: '#C0C0C0', 3: '#CD7F32' }
+const podiumOrder = [leaderboard[1], leaderboard[0], leaderboard[2]] as typeof leaderboard
+const podiumRanks = [2, 1, 3]
 
 export default function RankingsSection() {
   return (
@@ -33,12 +35,12 @@ export default function RankingsSection() {
         </div>
 
         <div className="rankings__podium">
-          {([leaderboard[1], leaderboard[0], leaderboard[2]] as typeof leaderboard).map((w, i) => {
-            const displayRank = i === 0 ? 2 : i === 1 ? 1 : 3
+          {podiumOrder.map((w, i) => {
+            const dr = podiumRanks[i]
             return (
-              <div key={w.rank} className={`rankings__podium-card rankings__podium-card--${displayRank}`}>
-                <div className="rankings__podium-rank" style={{ color: rankColors[displayRank] }}>#{displayRank}</div>
-                <div className="rankings__podium-avatar"><span>{w.name[0]}</span></div>
+              <div key={w.rank} className={`rankings__podium-card rankings__podium-card--${dr}`}>
+                <div className="rankings__podium-rank" style={{ color: rankColors[dr] }}>#{dr}</div>
+                <div className="rankings__podium-avatar">{w.name[0]}</div>
                 <div className="rankings__podium-name">{w.name}</div>
                 <div className="rankings__podium-class">{w.cls}</div>
                 <div className="rankings__podium-wins">{w.wins}<span>victories</span></div>
@@ -50,9 +52,7 @@ export default function RankingsSection() {
         <div className="rankings__table-wrap">
           <table className="rankings__table">
             <thead>
-              <tr>
-                <th>Rank</th><th>Warrior</th><th>Class</th><th>Clan</th><th>Realm</th><th>Victories</th>
-              </tr>
+              <tr><th>Rank</th><th>Warrior</th><th>Class</th><th>Clan</th><th>Realm</th><th>Victories</th></tr>
             </thead>
             <tbody>
               {leaderboard.map(w => (
@@ -60,13 +60,13 @@ export default function RankingsSection() {
                   <td><span className="rankings__rank-num" style={{ color: rankColors[w.rank] || 'var(--text-muted)' }}>{w.rank <= 3 ? `#${w.rank}` : w.rank}</span></td>
                   <td>
                     <div className="rankings__warrior-cell">
-                      <span className="rankings__warrior-avatar">{w.name[0]}</span>
+                      <div className="rankings__warrior-avatar">{w.name[0]}</div>
                       <span className="rankings__warrior-name">{w.name}</span>
                     </div>
                   </td>
                   <td><span className="rankings__class-tag">{w.cls}</span></td>
-                  <td className="rankings__clan">{w.clan}</td>
-                  <td className="rankings__realm">{w.realm}</td>
+                  <td className="rankings__muted">{w.clan}</td>
+                  <td className="rankings__muted">{w.realm}</td>
                   <td><span className="rankings__wins">{w.wins}</span></td>
                 </tr>
               ))}
@@ -74,7 +74,7 @@ export default function RankingsSection() {
           </table>
         </div>
 
-        <div className="rankings__view-all">
+        <div style={{ textAlign: 'center' }}>
           <button className="rankings__view-btn">View Full Leaderboard</button>
         </div>
       </div>
